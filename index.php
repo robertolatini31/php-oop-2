@@ -1,16 +1,31 @@
 <?php
-
 class User {
     public $name;
     public $userLogged;
-    public $cardDate;
-    function __construct($name, $userLogged, $cardDate) {
+    public $cardMonth;
+    public $cardYear;
+    public $cardControl;
+    function __construct(String $name, Bool $userLogged, Int $cardMonth, Int $cardYear) {
         $this->name = $name;
         $this->userLogged = $userLogged;
-        $this->cardDate = $cardDate;
+        $this->cardMonth = $cardMonth;
+        $this->cardYear = $cardYear;
+        $this->cardControl();
+    }
+    public function cardControl() {
+        $month = idate(m);
+        $year = idate(y);
+        if ($this->cardMonth > $month && $this->cardYear >= $year) {
+            var_dump('puoi pagare');
+            $this->cardControl = true;
+        } else {
+            var_dump('pagamento rifiutato, carta scaduta');
+            $this->cardControl = false;
+        }
+
     }
 }
-$newUser = new User('mario', true, '30/06');
+$newUser = new User('mario', true, 05, 33);
 var_dump($newUser);
 class AnimalsProduct {
     public $availability;
