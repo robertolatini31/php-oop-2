@@ -27,14 +27,14 @@ var_dump($newAnimalsProduct);
     public $wetFood;
     public $kibbleFood;
     
-    function __construct(String $name, Int $price, String $img , String $species, Bool $wetFood, Bool $kibbleFood){
-        parent::__construct($name, $price, $img, $species);
+    function __construct(String $name, Int $price, String $img , String $species, Bool $userLogged, Bool $wetFood, Bool $kibbleFood){
+        parent::__construct($name, $price, $img, $species, $userLogged);
         $this->wetFood = $wetFood;
         $this->kibbleFood = $kibbleFood;
     }
  }
 
-$newAnimalsFood = new AnimalsFood('manzo in scatola', 19, 'https://picsum.photos/200/300', 'cane', true, false);
+$newAnimalsFood = new AnimalsFood('manzo in scatola', 19, 'https://picsum.photos/200/300', 'cane', true, true, false);
 var_dump($newAnimalsFood);
 
 
@@ -43,14 +43,14 @@ class AnimalsGame extends Animalsproduct {
     public $rubberGame;
     public $clothGame;
     public $species;
-    function __construct(String $name, Int $price, String $img , String $species, Bool $rubberGame, Bool $clothGame){
-        parent::__construct($name, $price, $img, $species);
+    function __construct(String $name, Int $price, String $img , String $species, Bool $userLogged, Bool $rubberGame, Bool $clothGame){
+        parent::__construct($name, $price, $img, $species, $userLogged);
         $this->rubberGame = $rubberGame;
         $this->clothGame = $clothGame;
     }
 }
 
-$newAnimalsGame = new AnimalsGame('frisbee', 19, 'https://picsum.photos/200/300', 'cane', true, false);
+$newAnimalsGame = new AnimalsGame('frisbee', 19, 'https://picsum.photos/200/300', 'cane', true, true, false);
 var_dump($newAnimalsGame);
 
 
@@ -59,14 +59,14 @@ class AnimalsBed extends Animalsproduct {
     public $houseBed;
     public $cushionBed;
     public $species;
-    function __construct(String $name, Int $price, String $img , String $species, Bool $houseBed, Bool $cushionBed){
-        parent::__construct($name, $price, $img, $species);
+    function __construct(String $name, Int $price, String $img , String $species, Bool $userLogged, Bool $houseBed, Bool $cushionBed){
+        parent::__construct($name, $price, $img, $species, $userLogged);
         $this->houseBed = $houseBed;
         $this->cushionBed = $cushionBed;
     }
 }
 
-$newAnimalsBed = new AnimalsBed('casetta', 19, 'https://picsum.photos/200/300', 'cane', true, false);
+$newAnimalsBed = new AnimalsBed('casetta', 19, 'https://picsum.photos/200/300', 'cane', false, true, false);
 var_dump($newAnimalsBed);
 
 
@@ -76,14 +76,14 @@ class AnimalsClothing extends Animalsproduct {
     public $waterproofClothing;
     public $coatClothing;
     public $species;
-    function __construct(String $name, Int $price, String $img , String $species, Bool $waterproofClothing, Bool $coatClothing){
-        parent::__construct($name, $price, $img, $species);
+    function __construct(String $name, Int $price, String $img , String $species, Bool $userLogged, Bool $waterproofClothing, Bool $coatClothing){
+        parent::__construct($name, $price, $img, $species, $userLogged);
         $this->waterproofClothing = $waterproofClothing;
         $this->coatClothing = $coatClothing;
     }
 }
 
-$newAnimalsClothing = new AnimalsClothing('impermeabile star wars', 19, 'https://picsum.photos/200/300', 'cane', true, false);
+$newAnimalsClothing = new AnimalsClothing('impermeabile star wars', 19, 'https://picsum.photos/200/300', 'cane', false, true, false);
 var_dump($newAnimalsClothing);
 
 
