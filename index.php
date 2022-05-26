@@ -44,3 +44,19 @@ class AnimalsGame extends Animalsproduct {
 
 $newAnimalsGame = new AnimalsGame('cuccia', '19$', 'https://picsum.photos/200/300', 'cane', true, false);
 var_dump($newAnimalsGame);
+
+
+class AnimalsBed extends Animalsproduct {
+    public $type = 'game';
+    public $houseBed;
+    public $cushionBed;
+    public $species;
+    function __construct(String $name, String $price, String $img , String $species, Bool $houseBed, Bool $cushionBed){
+        parent::__construct($name, $price, $img, $species);
+        $this->houseBed = $houseBed;
+        $this->cushionBed = $cushionBed;
+    }
+}
+
+$newAnimalsBed = new AnimalsBed('cuccia', '19$', 'https://picsum.photos/200/300', 'cane', true, false);
+var_dump($newAnimalsBed);
