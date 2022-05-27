@@ -9,7 +9,7 @@ class AnimalsProduct {
     public $price;
     public $img;
     public $species;
-    function __construct(String $aviabilityStart, String $aviabilityEnd, String $name, Int $price, String $img, String $species, Bool $userLogged = false){
+    function __construct(String $aviabilityStart, String $aviabilityEnd, String $name, Float $price, String $img, String $species, Bool $userLogged = false){
         $this->name = $name;
         $this->price = $this->calcPrice($price, $userLogged);
         $this->img = $img;
@@ -17,7 +17,12 @@ class AnimalsProduct {
         $this->aviabilityStart = $aviabilityStart;
         $this->aviabilityEnd = $aviabilityEnd;
         $this->productAviability();
-        $this->freeShippingControl($price);
+        try {
+            $this->freeShippingControl($price);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+        
     }
     public function calcPrice($price, $userLogged) {
         if ($userLogged) {
