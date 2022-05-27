@@ -17,6 +17,7 @@ class AnimalsProduct {
         $this->aviabilityStart = $aviabilityStart;
         $this->aviabilityEnd = $aviabilityEnd;
         $this->productAviability();
+        $this->freeShippingControl($price);
     }
     public function calcPrice($price, $userLogged) {
         if ($userLogged) {

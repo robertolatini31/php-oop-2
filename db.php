@@ -10,10 +10,10 @@ $newUser = new User('mario', true, '07', '23');
 
 $newAnimalsProduct = new AnimalsProduct('01', '12', 'cuccia', 19, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged);
 
-$newAnimalsFood = new AnimalsFood('01', '12', 'manzo in scatola', 19, 'https://picsum.photos/200/300', 'cane', true, true, false);
+$newAnimalsFood = new AnimalsFood('01', '12', 'manzo in scatola', 44, 'https://picsum.photos/200/300', 'cane', true, true, false);
 
-$newAnimalsGame = new AnimalsGame('01', '04', 'frisbee', 19, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
+$newAnimalsGame = new AnimalsGame('01', '04', 'frisbee', 55.5, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
 
-$newAnimalsBed = new AnimalsBed('05', '07', 'casetta', 19, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
+$newAnimalsBed = new AnimalsBed('05', '07', 'casetta', 13, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
 
-$newAnimalsClothing = new AnimalsClothing('07', '11', 'impermeabile star wars', 19, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
+$newAnimalsClothing = new AnimalsClothing('07', '11', 'impermeabile star wars', 77.5, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged, true, false);
