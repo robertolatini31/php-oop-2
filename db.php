@@ -8,7 +8,7 @@ require_once __DIR__ . '/./Models/AnimalsClothing.php';
 
 $newUser = new User('mario', true, '07', '23');
 
-$newAnimalsProduct = new AnimalsProduct('01', '12', 'cuccia', 19, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged);
+$newAnimalsProduct = new AnimalsProduct('01', '12', 'cuccia', 0, 'https://picsum.photos/200/300', 'cane', $newUser->userLogged);
 
 $newAnimalsFood = new AnimalsFood('01', '12', 'manzo in scatola', 44, 'https://picsum.photos/200/300', 'cane', true, true, false);
 
