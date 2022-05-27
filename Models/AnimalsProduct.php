@@ -1,6 +1,7 @@
 <?php
-
+require __DIR__ . '/./FreeShippingTrait.php';
 class AnimalsProduct {
+    use FreeShipping;
     public $availability;
     public $aviabilityStart;
     public $aviabilityEnd;

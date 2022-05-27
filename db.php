@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/./Models/User.php';
 require_once __DIR__ . '/./Models/AnimalsProduct.php';
 require_once __DIR__ . '/./Models/AnimalsFood.php';
